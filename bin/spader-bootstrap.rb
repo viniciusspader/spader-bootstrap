@@ -1,10 +1,11 @@
 require 'rubygems'
 
 begin
-  require 'spader/bootstrap/bootstrap'
-rescue LoadError: e
-warn 'Could not load instalation'
+  require 'spader/bootstrap'
+rescue LoadError => e
+warn "Instalation stopped!"
+  puts e
   exit -1
 end
 
-Spader::Bootstrap.instalation
+Spader::Bootstrap.bootstrap
